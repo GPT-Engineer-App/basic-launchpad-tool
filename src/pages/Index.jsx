@@ -1,8 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    throw new Error("This is a test error");
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col">
